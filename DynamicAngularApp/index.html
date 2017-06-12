@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl" lang="en">
+
+
+<h1>{{div1+" "+div2}}</h1>
+<script src="bowerComponents/angular/angular.min.js"></script>
+<script>
+    var app=angular.module('app',[]);
+    app.controller("ctrl", ctrl);
+    function ctrl($scope){
+        $scope.div1="data form database coming soon...";
+        $scope.div2="just do it...";
+    }
+</script>
+</html>
