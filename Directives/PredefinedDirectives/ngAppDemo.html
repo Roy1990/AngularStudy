@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!--<html>
+<h1 ng-bind="10+20" style="color: red"></h1>
+<script src="bowerComponents/angular/angular.min.js"></script>
+<script>
+    angular.bootstrap(document);
+</script>
+</html>-->
+
+<html>
+<div ng-app="app" ng-controller="ctrl1">
+
+    <h1 ng-bind="var1"></h1>
+</div>
+<div id="cont2" ng-controller="ctrl2">
+    <h1 ng-bind="var2"></h1>
+</div>
+<script src="bowerComponents/angular/angular.min.js"></script>
+<script>
+    var app=angular.module('app',[]);
+    app.controller('ctrl1',ctrl);
+    function ctrl($scope) {
+        $scope.var1 = 'hello Rahul';
+    }
+    app.controller('ctrl2',ctrl2);
+    function ctrl2($scope){
+        $scope.var2='Iam angular';
+    }
+    angular.bootstrap(document.getElementById('cont2'),['app']);
+</script>
+</html>
